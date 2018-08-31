@@ -1,0 +1,27 @@
+---
+title: "Ejemplo reporte"
+authot: "hachepunto"
+date: "`r format(Sys.time(), '%d-%b-%Y')`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Paso 1: Cargar datos silenciosamente
+```{r, include=FALSE}
+#north
+north = state.area[which(state.region=="North Central")]
+names(north) = state.abb[which(state.region=="North Central")]
+
+#south
+south = state.area[which(state.region=="South")]
+names(south) = state.abb[which(state.region=="South")]
+```
+Imprimo datos
+
+```{r}
+print(north)
+print(south)
+```

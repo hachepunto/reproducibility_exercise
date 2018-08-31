@@ -1,7 +1,7 @@
 ---
 title: "Ejemplo reporte"
 authot: "hachepunto"
-date: "'r format'"
+date: "`r format(Sys.time(), '%d-%b-%Y')`"
 output: pdf_document
 ---
 
